@@ -4,18 +4,26 @@ library('kernlab')
 library('e1071')
 
 workPath <- file.path(getwd(),'CNARAsrc')
+options("scipen"=100,"digits"=4)
 source(file.path(workPath,'CNARA.R'))
 
 args <- commandArgs(trailingOnly = T)
 series <- args[1]
-samplePath <- '../hg19/processed/'
+samplePath <- args[2] #'/Volumes/arraymapMirror/arraymap/hg19/'
+try(if (!dir.exists(samplePath)) stop("check server directory"))
 probeFileName <- "probes,cn.tsv"
 segFileName <- "segments,cn.tsv"
 
 trainingFile <- file.path(workPath, "trainingSet.txt")
 
 arrayDir <- file.path(samplePath, series)
-arrayList <- list.files(arrayDir)
+arrayList <- list.dirs(arrayDir)[-1]
+#arrayList <- unlist(regmatches(arrayList,gregexpr('GSM[0-9]+',arrayList,perl=T)))
+arrayList <- sapply(arrayList,function(x) {
+    allfolders <- strsplit(x,"/",fixed=T)[[1]]
+    return(allfolders[length(allfolders)])
+})
+names(arrayList) = NULL
 noArray <- length(arrayList)
 
 outputFile <- file.path(arrayDir, "CNARA_output.txt")
@@ -25,37 +33,41 @@ write.table(tableHeader, file = outputFile, append = F, row.names = FALSE, col.n
 classifier <- trainSVM(trainingFile)
 
 for (arr in 1:noArray) {
+
+  if (file.exists(file.path(arrayDir,arrayList[arr],'sample_evaluation.tsv'))) next
   print(paste0("processing ", arrayList[arr], " (", arr, " of ", noArray, ")"))
   probeFile <- file.path(arrayDir, arrayList[arr], probeFileName)
   segFile <- file.path(arrayDir, arrayList[arr], segFileName)
-  
+
+  print(probeFile)
+  print(arrayList[arr])
   newCNProbe <- readProbe(probeFile=probeFile, sampleID=arrayList[arr])
   newSpeakCNAno <- calSpeakCNAno(newCNProbe)
-  
+
   #plot S graph
   plot(quality(newSpeakCNAno), xlab = "number of iterations", ylab = "S", main=arrayList[arr])
-  
+
   segNumberCBS <- calCBSBreakpoints(newCNProbe)
   segSpread <- calSpread(newCNProbe, segFile=segFile)
   #segSpread <- calSpread(newCNProbe) # if you don't have segmentation file
-  
+
   CNAno <- numberOfCNA(newSpeakCNAno)
   Speak <- speak(newSpeakCNAno)
-  
+
   #create a new object "Metrics" for the copy number profile for quality assessment
   CNProfileMetrics <- createMetrics(sampleID=arrayList[arr], speak=Speak, numberOfCNA=CNAno, cbsBreakpoints=segNumberCBS, spread=segSpread)
-  
+
   #quality assessment for the copy number profile
   assessment <- assessQuality(CNProfileMetrics, svmClassifier=classifier)
-  
+
   tmp <- paste(arrayList[arr], series, Speak, CNAno, segNumberCBS, segSpread, assessment$label, assessment$decision.values, assessment$flag, assessment$caseDiag, sep = "\t")
   write.table(tmp, file = outputFile, append = TRUE, row.names = FALSE, col.names = FALSE, quote = FALSE)
-  
+
   ### write QA log file for each sample
   sampleLog <- file.path(arrayDir, arrayList[arr], "sample_evaluation.tsv")
   for (entry in 1:11){
     write.table(paste(strsplit(tableHeader, "\t")[[1]][entry], strsplit(tmp, "\t")[[1]][entry], sep="\t"), file = sampleLog, append = TRUE, row.names = FALSE, col.names = FALSE, quote = FALSE)
-    
+
     #plot a best fit and counter-fit for a copy number profile. Call calSpeakCNAno again, can be omitted if you just want the assessment without the plot.
     # plotFCF(calSpeakCNAno(newCNProbe, iterations=CNAno))
   }

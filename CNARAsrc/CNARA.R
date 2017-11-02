@@ -1,7 +1,7 @@
 ###source code for S4 package "CNAQA" by AI Ni (ainijulia AT gmail DOT com), 2014
 
 ##### S4 class definition
-setClass("CNProbe", representation = representation(sampleID="character", probeID="integer", chr="integer", pos="numeric", log2="numeric", lengthProbe="integer"))
+setClass("CNProbe", representation = representation(sampleID="character", probeID="character", chr="integer", pos="numeric", log2="numeric", lengthProbe="integer"))
 setClass("SpeakCNAno", representation = representation(sampleID="character", x="numeric", xchr="integer", lengthx="integer", iterations="integer", quality="numeric", fcf="matrix"))
 setClass("Metrics", representation = representation(sampleID="character", speak="numeric", numberOfCNA="integer", cbsBreakpoints="integer", spread="numeric"))
 
@@ -193,7 +193,7 @@ setMethod("calCBSBreakpoints", "CNProbe",
 		CNProbe@chr <- CNProbe@chr[sampledIndex]
 		CNProbe@pos <- CNProbe@pos[sampledIndex]
 		CNProbe@log2 <- CNProbe@log2[sampledIndex]
-
+        
 		CNA.object <- CNA(CNProbe@log2, CNProbe@chr, CNProbe@pos, data.type="logratio", sampleid=object@sampleID)
 		                  
 		smoothed.CNA.object <- smooth.CNA(CNA.object)
@@ -365,8 +365,11 @@ setMethod("assessQuality", "Metrics",
 
 ##### functions
 readProbe <- function(probeFile, sampleID) {
+    library(readr)
 	if (file.exists(probeFile)) {
-		tmpProbe <- read.table(probeFile, header = FALSE, skip = 1, sep = "\t")
+		tmpProbe <- read_delim(probeFile, delim = "\t", escape_double = FALSE, trim_ws = TRUE)
+        tmpProbe <- as.data.frame(tmpProbe)
+        tmpProbe <- tmpProbe[!is.na(tmpProbe$VALUE),]
 		names(tmpProbe) <- c("ID", "chr", "position", "log2")
 		tmpProbe <- tmpProbe[order(tmpProbe[,2], tmpProbe[,3]), ]
 		newCNProbe <- new("CNProbe", sampleID=sampleID, probeID=tmpProbe$ID, chr=tmpProbe$chr, pos=tmpProbe$position, log2=tmpProbe$log2)
