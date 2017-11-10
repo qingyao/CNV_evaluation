@@ -10,6 +10,7 @@ source(file.path(workPath,'CNARA.R'))
 args <- commandArgs(trailingOnly = T)
 series <- args[1]
 samplePath <- args[2] #'/Volumes/arraymapMirror/arraymap/hg19/'
+update <- args[3]
 try(if (!dir.exists(samplePath)) stop("check server directory"))
 probeFileName <- "probes,cn.tsv"
 segFileName <- "segments,cn.tsv"
@@ -28,19 +29,18 @@ noArray <- length(arrayList)
 
 outputFile <- file.path(arrayDir, "CNARA_output.txt")
 tableHeader <- paste("Sample", "Series", "Speak", "Breakpoint_Step", "Breakpoint_CBS", "Spread", "Classification_Label", "Decision_Value", "Good_Poor", "Case_Diagnosis", sep = "\t")
-write.table(tableHeader, file = outputFile, append = F, row.names = FALSE, col.names = FALSE, quote = FALSE)
-
+if (!file.exists(outputFile) | update == 1){
+    write.table(tableHeader, file = outputFile, append = F, row.names = FALSE, col.names = FALSE, quote = FALSE)
+}
 classifier <- trainSVM(trainingFile)
 
 for (arr in 1:noArray) {
 
-  if (file.exists(file.path(arrayDir,arrayList[arr],'sample_evaluation.tsv'))) next
+  if (file.exists(file.path(arrayDir,arrayList[arr],'sample_evaluation.tsv')) & update != 1) next
   print(paste0("processing ", arrayList[arr], " (", arr, " of ", noArray, ")"))
   probeFile <- file.path(arrayDir, arrayList[arr], probeFileName)
   segFile <- file.path(arrayDir, arrayList[arr], segFileName)
 
-  print(probeFile)
-  print(arrayList[arr])
   newCNProbe <- readProbe(probeFile=probeFile, sampleID=arrayList[arr])
   newSpeakCNAno <- calSpeakCNAno(newCNProbe)
 
@@ -65,7 +65,7 @@ for (arr in 1:noArray) {
 
   ### write QA log file for each sample
   sampleLog <- file.path(arrayDir, arrayList[arr], "sample_evaluation.tsv")
-  for (entry in 1:11){
+  for (entry in 1:length(strsplit(tableHeader, "\t")[[1]])){
     write.table(paste(strsplit(tableHeader, "\t")[[1]][entry], strsplit(tmp, "\t")[[1]][entry], sep="\t"), file = sampleLog, append = TRUE, row.names = FALSE, col.names = FALSE, quote = FALSE)
 
     #plot a best fit and counter-fit for a copy number profile. Call calSpeakCNAno again, can be omitted if you just want the assessment without the plot.
