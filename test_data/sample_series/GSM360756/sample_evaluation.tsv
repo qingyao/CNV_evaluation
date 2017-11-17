@@ -1,0 +1,10 @@
+Sample	GSM360756
+Series	sample_series
+Speak	4.4271
+Breakpoint_Step	9
+Breakpoint_CBS	105
+Spread	0.2376
+Classification_Label	2
+Decision_Value	-0.7834
+Good_Poor	poor
+Case_Diagnosis	1: hypersegmented, discernible CNAs with some waves

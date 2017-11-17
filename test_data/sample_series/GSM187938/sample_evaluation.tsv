@@ -1,0 +1,10 @@
+Sample	GSM187938
+Series	sample_series
+Speak	1.4668
+Breakpoint_Step	118
+Breakpoint_CBS	22
+Spread	0.7486
+Classification_Label	2
+Decision_Value	-1.1687
+Good_Poor	poor
+Case_Diagnosis	4: poor quality, few CNAs, few waves, high probe value dispersion

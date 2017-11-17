@@ -1,0 +1,10 @@
+Sample	GSM360643
+Series	sample_series
+Speak	1.7975
+Breakpoint_Step	16
+Breakpoint_CBS	310
+Spread	0.1874
+Classification_Label	2
+Decision_Value	-1.6002
+Good_Poor	poor
+Case_Diagnosis	3: poor quality, indiscernible CNAs with many waves

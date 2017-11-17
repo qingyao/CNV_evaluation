@@ -1,0 +1,10 @@
+Sample	GSM182894
+Series	sample_series
+Speak	1.1509
+Breakpoint_Step	120
+Breakpoint_CBS	22
+Spread	0.2526
+Classification_Label	1
+Decision_Value	1.4989
+Good_Poor	good
+Case_Diagnosis	5: good quality, control or without many CNAs

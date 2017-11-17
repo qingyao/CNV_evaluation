@@ -1,0 +1,6 @@
+Sample	Series	Speak	Breakpoint_Step	Breakpoint_CBS	Spread	Classification_Label	Decision_Value	Good_Poor	Case_Diagnosis
+GSM182894	sample_series	1.1509	120	22	0.2526	1	1.4989	good	5: good quality, control or without many CNAs
+GSM187938	sample_series	1.4668	118	22	0.7486	2	-1.1687	poor	4: poor quality, few CNAs, few waves, high probe value dispersion
+GSM360643	sample_series	1.7975	16	310	0.1874	2	-1.6002	poor	3: poor quality, indiscernible CNAs with many waves
+GSM360756	sample_series	4.4271	9	105	0.2376	2	-0.7834	poor	1: hypersegmented, discernible CNAs with some waves
+GSM491138	sample_series	11.6022	15	32	0.2547	1	1.7358	good	2: good quality, discernible CNAs with few waves

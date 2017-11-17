@@ -1,0 +1,350 @@
+AM20130424PFI	AM20130424PFI-11_001	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_002	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_003	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_004	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_005	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_006	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_007	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_008	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_009	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_010	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_011	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_012	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_013	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_014	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_015	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_016	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_017	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_018	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_019	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_020	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_021	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_022	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_023	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_024	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_025	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_026	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_027	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_028	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_029	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_030	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_031	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_032	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_033	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_034	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_035	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_036	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_037	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_038	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_039	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_040	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_041	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_042	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_043	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_044	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_045	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_046	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_047	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_048	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_049	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_050	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_051	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_052	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_053	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_054	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_055	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_056	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_057	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_058	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_059	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_060	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_061	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_062	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_063	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_064	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_065	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_066	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_067	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_068	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_069	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_070	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_071	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_072	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_073	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_074	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_075	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_091	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_092	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_093	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_094	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_095	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_096	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_097	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_098	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_099	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_100	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_101	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_102	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_103	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_104	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_105	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_106	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_107	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_108	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_109	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_110	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_111	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_112	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_113	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_114	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_115	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_116	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_117	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_118	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_119	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_120	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_121	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_122	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_123	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_124	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_125	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_126	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_127	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_128	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_129	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_130	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_131	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_132	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_133	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_134	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_135	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_136	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_137	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_138	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_139	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_140	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_141	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_142	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_143	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_144	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_145	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_146	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_147	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_148	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_149	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_150	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-11_151	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-control_a1	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-control_a2	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-control_a3	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-control_f1	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-control_f2	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-control_f3	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	AM20130424PFI-control_f4	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_0650	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_1804	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5408	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5410	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5411	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5412	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5413	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5414	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5415	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5416	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5417	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5418	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5856	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5858	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_5859	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_6389	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_6390	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_06_6391	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_12_5295	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_12_5299	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_12_5301	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_14_0781	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_15_1444	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5947	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5950	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5951	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5952	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5954	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5955	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5956	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5958	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5959	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_19_5960	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_26_1442	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_26_5132	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_26_5133	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_26_5134	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_26_5135	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_26_5136	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_26_5139	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_2501	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_2510	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5204	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5207	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5208	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5209	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5213	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5214	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5215	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5216	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5218	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5219	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_5220	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_28_6450	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_32_1979	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_32_1980	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_32_5222	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_41_5651	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_4925	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_4926	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_4927	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_4928	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_4929	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_4931	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_4932	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_4934	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_4935	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_6191	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_6192	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_6193	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_6282	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_76_6285	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_81_5910	yAxisFactor,segNormal,minSegCount,GPedition
+AM20130424PFI	TCGA_87_5896	yAxisFactor,segNormal,minSegCount,GPedition
+GSE10524	GSM265939	Unexpected error:<class 'IndexError'>
+GSE37259	GSM914992	Unexpected error:<class 'IndexError'>
+GSE37259	GSM914993	Unexpected error:<class 'IndexError'>
+GSE37259	GSM914994	Unexpected error:<class 'IndexError'>
+GSE37259	GSM914995	Unexpected error:<class 'IndexError'>
+GSE37259	GSM914996	Unexpected error:<class 'IndexError'>
+GSE37259	GSM914997	Unexpected error:<class 'IndexError'>
+GSE37259	GSM914998	Unexpected error:<class 'IndexError'>
+GSE37259	GSM914999	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915000	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915001	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915002	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915003	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915004	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915005	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915006	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915007	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915008	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915009	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915010	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915011	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915012	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915013	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915014	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915015	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915016	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915017	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915018	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915019	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915020	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915021	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915022	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915023	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915024	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915025	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915026	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915027	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915028	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915029	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915030	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915031	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915032	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915033	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915034	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915035	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915036	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915037	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915038	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915039	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915040	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915041	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915042	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915043	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915044	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915045	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915046	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915047	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915048	Unexpected error:<class 'IndexError'>
+GSE37259	GSM915049	Unexpected error:<class 'IndexError'>
+GSE9154	GSM231334	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231335	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231336	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231337	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231338	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231339	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231340	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231341	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231342	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231343	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231344	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231345	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231346	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231347	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231348	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231349	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231350	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231351	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231352	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231353	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231354	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231355	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231356	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231357	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231358	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231359	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231360	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231361	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231362	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231363	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231364	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231365	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231366	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231367	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231368	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231369	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231370	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231371	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231372	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231373	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231374	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9154	GSM231375	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231848	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231849	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231850	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231851	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231852	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231853	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231854	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231855	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231856	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231857	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9177	GSM231858	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242186	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242187	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242188	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242189	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242190	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242191	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242192	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242193	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242194	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242195	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242197	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242198	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242199	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242200	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242201	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242202	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242203	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242204	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242205	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9585	GSM242206	-gth,-lth,-center,-scale,-chr2plot,PROBEMEAN
+GSE9672	GSM244402	Unexpected error:<class 'IndexError'>

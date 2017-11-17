@@ -43,7 +43,7 @@ setMethod("initialize", "CNProbe",
 	})
 
 
-setMethod("calSpeakCNAno", "CNProbe", 
+setMethod("calSpeakCNAno", "CNProbe",
 	function(object, ..., windowSize=100, nskip=11, iterations=120){
 		library(robfilter)
 
@@ -78,14 +78,14 @@ setMethod("calSpeakCNAno", "CNProbe",
 			FCF[1,] <- FCF[2,]
 			tmpM <- x-FCF[1,]
 		    resultH0 <- t(tmpM)%*%(tmpM)
-			
+
 			FCF[3,] <- FCF[4,]
 			tmpM <- x-FCF[3,]
 		    resultCF0 <- t(tmpM)%*%(tmpM)
 
 		    quality[j] <- resultCF0/resultH0
 
-		    #if (j > 40 && quality[j-30] == max(quality[(j-30):j])) 
+		    #if (j > 40 && quality[j-30] == max(quality[(j-30):j]))
 			#	break
 
 			if (j == 1) {
@@ -99,12 +99,12 @@ setMethod("calSpeakCNAno", "CNProbe",
 						resultH1[i] <- Inf
 						next
 					}
-							
-					cpTmp <- sort(c(changingPointIndex, i)) 
-					
+
+					cpTmp <- sort(c(changingPointIndex, i))
+
 					for (t in 1:(length(cpTmp)-1))
 						FCF[2,cpTmp[t]:(cpTmp[t+1]-1)] <- mean(x[cpTmp[t]:(cpTmp[t+1]-1)])
-					
+
 					tmpM <- x-FCF[2,]
 					resultH1[i] <- t(tmpM)%*%(tmpM)
 				}
@@ -114,8 +114,8 @@ setMethod("calSpeakCNAno", "CNProbe",
 				k <- kcf[which(diff == max(diff))]
 			}
 
-			cpTmp <- sort(c(changingPointIndex, k)) 
-				
+			cpTmp <- sort(c(changingPointIndex, k))
+
 			for (t in 1:(length(cpTmp)-1))
 				FCF[2,cpTmp[t]:(cpTmp[t+1]-1)] <- mean(x[cpTmp[t]:(cpTmp[t+1]-1)])
 
@@ -125,9 +125,9 @@ setMethod("calSpeakCNAno", "CNProbe",
 			if (resultH1 > resultH0) {
 				break
 			} else {
-			
+
 				changingPointIndex <- c(changingPointIndex, k)
-				
+
 				############################
 				# Calculate counter fit
 				############################
@@ -148,7 +148,7 @@ setMethod("calSpeakCNAno", "CNProbe",
 							resultCF1[i] <- Inf
 							next
 						}
-						
+
 						FCF[4,tmpCPIndex[t]:(i-1)] <- mean(x[tmpCPIndex[t]:(i-1)])
 						FCF[4,i:(tmpCPIndex[t+1]-1)] <- mean(x[i:(tmpCPIndex[t+1]-1)])
 						tmpM <- x[tmpCPIndex[t]:(tmpCPIndex[t+1]-1)]-FCF[4,tmpCPIndex[t]:(tmpCPIndex[t+1]-1)]
@@ -167,12 +167,12 @@ setMethod("calSpeakCNAno", "CNProbe",
 					diff <- c(diff, t(diffM)%*%(diffM)-t(tmpM)%*%(tmpM))
 
 				}
-				
+
 				cfPointIndex <- c(1,lengthProbe+1,kcf)
-				cfTmp <- sort(cfPointIndex) 
-				
+				cfTmp <- sort(cfPointIndex)
+
 				for (t in 1:(length(cfTmp)-1))
-					FCF[4,cfTmp[t]:(cfTmp[t+1]-1)] <- mean(x[cfTmp[t]:(cfTmp[t+1]-1)])	
+					FCF[4,cfTmp[t]:(cfTmp[t+1]-1)] <- mean(x[cfTmp[t]:(cfTmp[t+1]-1)])
 
 			}
 		}
@@ -183,7 +183,7 @@ setMethod("calSpeakCNAno", "CNProbe",
 	})
 
 
-setMethod("calCBSBreakpoints", "CNProbe", 
+setMethod("calCBSBreakpoints", "CNProbe",
 	function(object, ...) {
 		library(DNAcopy)
 
@@ -193,31 +193,31 @@ setMethod("calCBSBreakpoints", "CNProbe",
 		CNProbe@chr <- CNProbe@chr[sampledIndex]
 		CNProbe@pos <- CNProbe@pos[sampledIndex]
 		CNProbe@log2 <- CNProbe@log2[sampledIndex]
-        
+
 		CNA.object <- CNA(CNProbe@log2, CNProbe@chr, CNProbe@pos, data.type="logratio", sampleid=object@sampleID)
-		                  
+
 		smoothed.CNA.object <- smooth.CNA(CNA.object)
-		segment.smoothed.CNA.object <- segment(smoothed.CNA.object, verbose=1, alpha=0)		
+		segment.smoothed.CNA.object <- segment(smoothed.CNA.object, verbose=1, alpha=0)
 
 		segN <- length(segment.smoothed.CNA.object$output$ID)
 		return(segN)
 
 	})
 
-setMethod("calCBS", "CNProbe", 
+setMethod("calCBS", "CNProbe",
 	function(object, ..., verbose=1, alpha=0) {
 		library(DNAcopy)
 
 		CNA.object <- CNA(object@log2, object@chr, object@pos, data.type="logratio", sampleid=object@sampleID)
-		                  
+
 		smoothed.CNA.object <- smooth.CNA(CNA.object)
-		segment.smoothed.CNA.object <- segment(smoothed.CNA.object, verbose=verbose, alpha=alpha)		
+		segment.smoothed.CNA.object <- segment(smoothed.CNA.object, verbose=verbose, alpha=alpha)
 
 		return(segment.smoothed.CNA.object)
 
 	})
 
-setMethod("calSpread", "CNProbe", 
+setMethod("calSpread", "CNProbe",
 	function(object, ..., segFile="", verbose=1, alpha=0) {
 		if (file.exists(segFile)) {
 			tmpSeg <- read.table(segFile, header = FALSE, skip = 1, sep = "\t")
@@ -274,7 +274,7 @@ setMethod("calSpread", "CNProbe",
 
 	})
 
-setMethod("plotFCF", "SpeakCNAno", 
+setMethod("plotFCF", "SpeakCNAno",
 	function(object) {
 		index <- c(1:object@lengthx)
 		plot(index, object@x, type = "l", xlab = "chromosome", ylab = "log2 ratio", col = colors()[170], lwd = 1, xaxt="n", ylim=c(-0.8,0.6), main=object@sampleID)
@@ -351,14 +351,14 @@ setMethod("assessQuality", "Metrics",
 				caseDiag <- "3: poor quality, indiscernible CNAs with many waves"
 			}
 
-			if (testset[[1]] > thdPoor) 
+			if (testset[[1]] > thdPoor)
 				caseDiag <- "1: hypersegmented, discernible CNAs with some waves"
 		}
 
 		assessment <- data.frame(predictQuality, attr(predictQuality, "decision.values"), flag, caseDiag)
 		names(assessment) <- c("label", "decision.values", "flag", "caseDiag")
 		return(assessment)
-		
+
 	})
 
 
@@ -369,11 +369,11 @@ readProbe <- function(probeFile, sampleID) {
 	if (file.exists(probeFile)) {
 		tmpProbe <- read_delim(probeFile, delim = "\t", escape_double = FALSE, trim_ws = TRUE)
         tmpProbe <- as.data.frame(tmpProbe)
-        tmpProbe <- tmpProbe[!is.na(tmpProbe$VALUE),]
+        tmpProbe <- tmpProbe[!is.na(tmpProbe[,4]),]
 		names(tmpProbe) <- c("ID", "chr", "position", "log2")
 		tmpProbe <- tmpProbe[order(tmpProbe[,2], tmpProbe[,3]), ]
 		newCNProbe <- new("CNProbe", sampleID=sampleID, probeID=tmpProbe$ID, chr=tmpProbe$chr, pos=tmpProbe$position, log2=tmpProbe$log2)
-	
+
 	} else {
 		stop("Cannot find CNA probe file.")
 	}
@@ -384,8 +384,8 @@ readProbe <- function(probeFile, sampleID) {
 trainSVM <- function(trainingFile) {
 	library(kernlab)
 	library(e1071)
-	
-	if (!file.exists(trainingFile)) 
+
+	if (!file.exists(trainingFile))
 		stop("Cannot find training file.")
 
 	trainingSet <- read.table(trainingFile, header = TRUE, sep ="\t")

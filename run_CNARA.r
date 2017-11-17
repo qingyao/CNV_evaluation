@@ -27,10 +27,14 @@ arrayList <- sapply(arrayList,function(x) {
 names(arrayList) = NULL
 noArray <- length(arrayList)
 
+summaryFile <- file.path(getwd(),'CNARA_summary.tsv')
 outputFile <- file.path(arrayDir, "CNARA_output.txt")
 tableHeader <- paste("Sample", "Series", "Speak", "Breakpoint_Step", "Breakpoint_CBS", "Spread", "Classification_Label", "Decision_Value", "Good_Poor", "Case_Diagnosis", sep = "\t")
 if (!file.exists(outputFile) | update == 1){
     write.table(tableHeader, file = outputFile, append = F, row.names = FALSE, col.names = FALSE, quote = FALSE)
+}
+if (!file.exists(summaryFile) | update == 1){
+    write.table(tableHeader, file = summaryFile, append = F, row.names = FALSE, col.names = FALSE, quote = FALSE)
 }
 classifier <- trainSVM(trainingFile)
 
@@ -49,20 +53,21 @@ for (arr in 1:noArray) {
 
   segNumberCBS <- calCBSBreakpoints(newCNProbe)
   segSpread <- calSpread(newCNProbe, segFile=segFile)
+  segSpread <- round(segSpread,4)
   #segSpread <- calSpread(newCNProbe) # if you don't have segmentation file
 
   CNAno <- numberOfCNA(newSpeakCNAno)
   Speak <- speak(newSpeakCNAno)
-
+  Speak <- round(Speak,4)
   #create a new object "Metrics" for the copy number profile for quality assessment
   CNProfileMetrics <- createMetrics(sampleID=arrayList[arr], speak=Speak, numberOfCNA=CNAno, cbsBreakpoints=segNumberCBS, spread=segSpread)
 
   #quality assessment for the copy number profile
   assessment <- assessQuality(CNProfileMetrics, svmClassifier=classifier)
 
-  tmp <- paste(arrayList[arr], series, Speak, CNAno, segNumberCBS, segSpread, assessment$label, assessment$decision.values, assessment$flag, assessment$caseDiag, sep = "\t")
+  tmp <- paste(arrayList[arr], series, Speak, CNAno, segNumberCBS, segSpread, assessment$label, round(assessment$decision.values,4), assessment$flag, assessment$caseDiag, sep = "\t")
   write.table(tmp, file = outputFile, append = TRUE, row.names = FALSE, col.names = FALSE, quote = FALSE)
-
+  write.table(tmp, file = summaryFile, append = TRUE, row.names = FALSE, col.names = FALSE, quote = FALSE)
   ### write QA log file for each sample
   sampleLog <- file.path(arrayDir, arrayList[arr], "sample_evaluation.tsv")
   for (entry in 1:length(strsplit(tableHeader, "\t")[[1]])){
