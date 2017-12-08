@@ -48,7 +48,7 @@ def cli(series,test,update):
             arrayPlatform.update({i[1]:i[2]})
             arrayTumor.update({i[1]:i[3]})
 
-    names = ['platform','TumorOrNormal','CNsegments','fracbsegments','skewness_seg','kurtosis_seg','skewness_prob','kurtosis_prob','probeMean','segMedian','positive_segment_ratio_mean','positive_segment_ratio_med']
+    names = ['platform','TumorOrNormal','CNsegments','max1_cn','max2_cn','max3_cn','fracbsegments','max1_fb','max2_fb','max3_fb','skewness_seg','kurtosis_seg','skewness_prob','kurtosis_prob','probeMean','segMedian','positive_segment_ratio_mean','positive_segment_ratio_med']
     if not os.path.isfile('sample_evalutaion_summary.tsv'):
         with open('sample_evalutaion_summary.tsv','w') as evaluationfile:
             evaluationfile.write('\t'.join(['Series', 'Array'] + names) + '\n')
@@ -79,7 +79,24 @@ def cli(series,test,update):
             continue
 
         clen = len(cnseg)
+        clen_chr = []
+        try:
+            for chr in range(23):
+                clen_chr.append(len(cnseg[cnseg.iloc[:,1]==chr+1]))
+        except TypeError:
+            for chr in range(23):
+                clen_chr.append(len(cnseg[cnseg.iloc[:,1]==str(chr+1)]))
+        max3_clen_chr = sorted(clen_chr,reverse=True)[:3]
+
         blen = len(fbseg)
+        blen_chr = []
+        try:
+            for chr in range(23):
+                blen_chr.append(len(fbseg[fbseg.iloc[:,1]==chr+1]))
+        except TypeError:
+            for chr in range(23):
+                blen_chr.append(len(fbseg[fbseg.iloc[:,1]==str(chr+1)]))
+        max3_blen_chr = sorted(blen_chr,reverse=True)[:3]
 
 
         ### adjust by mean ###
@@ -117,7 +134,7 @@ def cli(series,test,update):
 
         platform = arrayPlatform[array]
         tumorOrNormal =arrayTumor[array]
-        values = [platform,tumorOrNormal] + list(map(str,[clen,blen])) + list(map(lambda x: '%.4f'%(x) ,[skseg,ktseg,skprob,ktprob,adjMean,adjMedian,posratio_mean,posratio_med]))
+        values = [platform,tumorOrNormal] + list(map(str,[clen]+max3_clen_chr+[blen]+max3_blen_chr)) + list(map(lambda x: '%.4f'%(x) ,[skseg,ktseg,skprob,ktprob,adjMean,adjMedian,posratio_mean,posratio_med]))
 #        with open(os.path.join(data_dir,series,array,'sample_evaluation.tsv'), 'a') as f:
 #            for i in range(len(names)):
 #                f.write('\t'.join([names[i], values[i]]) + '\n')
@@ -162,7 +179,7 @@ def weighted_median(pddata,value_colname, weights_StartEndinTuple):
 
 
 ##for tests:
-cnseg = pd.read_csv('/Volumes/arraymapMirror/arraymap/hg19/GSE40546/GSM996083/segments,cn.tsv',sep='\t')
+#cnseg = pd.read_csv('/Volumes/arraymapMirror/arraymap/hg19/GSE40546/GSM996083/segments,cn.tsv',sep='\t')
 #pddata= cnseg
 #value_colname= 'value'
 #weights_StartEndinTuple= ('start','end')

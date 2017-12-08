@@ -367,7 +367,7 @@ setMethod("assessQuality", "Metrics",
 readProbe <- function(probeFile, sampleID) {
     library(readr)
 	if (file.exists(probeFile)) {
-		tmpProbe <- read_delim(probeFile, delim = "\t", escape_double = FALSE, trim_ws = TRUE)
+		tmpProbe <- suppressMessages(read_delim(probeFile, delim = "\t", escape_double = FALSE, trim_ws = TRUE))
         tmpProbe <- as.data.frame(tmpProbe)
         tmpProbe <- tmpProbe[!is.na(tmpProbe[,4]),]
 		names(tmpProbe) <- c("ID", "chr", "position", "log2")
