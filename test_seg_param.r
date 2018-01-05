@@ -25,6 +25,7 @@ seriesName='combine_series'
 setwd('/Users/pgweb/arraydata/aroma/EvaluationPack/')
 workingdir = 'test_data/'
 cids=list.files(file.path(workingdir,seriesName))
+cids=cids[-grep("_",cids)]
 cid = 'GSM381297'
 cid = 'GSM433918'
 chipType='GenomeWideSNP_6'
@@ -42,12 +43,12 @@ chrs = 1:23
 cnsegPerArray <- function(workingdir,seriesName, cid, chrs, minw, smrg, smsd, undosplit, undopr, undosd){
   # dir.create(file.path(workingdir,seriesName,cid), showWarnings = FALSE)
   fn <- file.path(workingdir,seriesName,cid, sprintf('segments,cn,%s_%s_%s.tsv',smrg, undosplit,undosd))
-  # fn <- file.path(workingdir,seriesName,cid, sprintf('segments,cn,sd,%s_%s_%s.tsv',smrg, undosplit,undosd))
+  fn <- file.path(workingdir,seriesName,cid, sprintf('segments,cn,sd,%s_%s_%s.tsv',smrg, undosplit,undosd))
   cat("sample_id","chromosome","start", "end", "value", "probes\n",sep="\t",file=fn,append = F)
-  # cat("sample_id","chromosome","start", "end", "probes", "seg.mean","seg.sd\n",sep="\t",file=fn,append = F)
+  cat("sample_id","chromosome","start", "end", "probes", "seg.mean","seg.sd\n",sep="\t",file=fn,append = F)
   t <- 0 #
   logf <- file.path(workingdir,seriesName,cid, 'log.txt')
-  # cat(minw,smrg, smsd, undosplit, undopr,undosd,'',sep = '\t',file = logf,append = TRUE)
+  cat(minw,smrg, smsd, undosplit, undopr,undosd,'',sep = '\t',file = logf,append = TRUE)
   for (chrname in 1:23){
     data<- read.table(sprintf('%s/%s/%s/probes,cn,chr%d.tsv',workingdir,seriesName,cid,chrname),header=T)
     cna1 <- CNA(genomdat=data$VALUE,
@@ -69,19 +70,25 @@ cnsegPerArray <- function(workingdir,seriesName, cid, chrs, minw, smrg, smsd, un
   cat(t, '\n',file = logf,append = TRUE,sep = '')
 }
 for (cid in cids){
-  for (undosplit in c("sdundo")){
+  for (undosplit in c("none")){ #"sdundo",
     for (minw in c( 5)){
       # for (smrg in c(5,10)){
       for (smrg in c(5)){  ## test for GPL16131, GPL6801
         for (smsd in c(2) ){ 
           
-          # if (undosplit == "prune"){
-          #   for (undopr in c(0.05, 0.1)){
-          #     undosd <- NA
-          #     cat(minw, smrg, smsd, undosplit, undopr, undosd)
-          #     cnsegPerArray(workingdir,seriesName, cid, chrs, minw, smrg, smsd, undosplit, undopr, undosd)
-          #     }
-          #   }else {
+          if (undosplit == "prune"){
+            for (undopr in c(0.05, 0.1)){
+              undosd <- NA
+              cat(minw, smrg, smsd, undosplit, undopr, undosd)
+              cnsegPerArray(workingdir,seriesName, cid, chrs, minw, smrg, smsd, undosplit, undopr, undosd)
+              }
+          }else if(undosplit=="none") {
+            undosd <- NA
+            undopr <- NA
+            cat(minw, smrg, smsd, undosplit, undopr, undosd)
+            cnsegPerArray(workingdir,seriesName, cid, chrs, minw, smrg, smsd, undosplit, undopr, undosd)
+            
+            }else{
           for (undosd in c(1,2)){
           # for (undosd in c(3,4)){ ## test for GPL16131, GPL6801
             undopr <- NA
@@ -89,7 +96,7 @@ for (cid in cids){
             cnsegPerArray(workingdir,seriesName, cid, chrs, minw, smrg, smsd, undosplit, undopr, undosd)
           }
           
-          # }
+          }
         }
       }
     }
@@ -101,32 +108,37 @@ sig_seg_df <- data.frame()
 for (cid in cids){
   logf <- file.path(workingdir,seriesName,cid, 'log.txt')
   output <- read.table(logf,stringsAsFactors = F)
+  nr <- nrow(output) 
   cols <- 6+(1:23)*2-1
-  seg_num <- apply(output[,cols], 1, sum)
+  seg_num <- apply(output[c(1:4,nr),cols], 1, sum) ##some tests in some samples in the middle rows
   # sig_seg_num <- apply(output[,cols+1], 1, sum)+23
-  sig_seg_num <-seg_num-apply(output[,cols], 1, max)
+  sig_seg_num <-seg_num-apply(output[c(1:4,nr),cols], 1, max)
   seg_df <- rbind(seg_df,seg_num)
   sig_seg_df <- rbind(sig_seg_df, sig_seg_num)
 }
 
 plf_search <- read.table('select_3_sample_platform.txt',header=T,stringsAsFactors = F)
-colnames(seg_df) = c('5,1','5,2','10,1','10,2')
+colnames(seg_df) = c('5,1','5,2','10,1','10,2','none')
 colnames(sig_seg_df) = colnames(seg_df)
 
 platforms <- sapply(cids,function(x) plf_search[plf_search$sample==x,3])
 seg_df$platform <- factor(platforms)
 sig_seg_df$platform <- factor(platforms)
 
-seg_df <- melt(seg_df,id.vars = 5)
-sig_seg_df <- melt(sig_seg_df,id.vars = 5)
+seg_df <- melt(seg_df,id.vars = 6)
+sig_seg_df <- melt(sig_seg_df,id.vars = 6)
 colnames(seg_df) <- c('platform','smoothRegion,undoSD','No.segments')
 colnames(sig_seg_df) = colnames(seg_df)
-
+seg_df$`smoothRegion,undoSD` <- factor(seg_df$`smoothRegion,undoSD`,levels = c('none','5,1','5,2','10,1','10,2'))
+sig_seg_df$`smoothRegion,undoSD` <- factor(sig_seg_df$`smoothRegion,undoSD`,levels = c('none','5,1','5,2','10,1','10,2'))
 p = ggplot(seg_df,aes(x=`smoothRegion,undoSD`,y=No.segments))
 p = ggplot(sig_seg_df,aes(x=`smoothRegion,undoSD`,y=No.segments))
-p+geom_violin()+ geom_jitter(height = 0, width = 0.1)+facet_wrap(~platform, scales = 'free') + ggtitle('total CN segments')
-ggsave('test_data/segment_test_plot.pdf')
-ggsave('test_data/segment-maxchr_test_plot.pdf')
+p+geom_violin()+ geom_jitter(height = 0, width = 0.1)+
+  facet_wrap(~platform, scales = 'free') + ggtitle('total CN segments')
+p+geom_violin()+ geom_jitter(height = 0, width = 0.1)+
+  facet_wrap(~platform, scales = 'free') + ggtitle('total CN segments-maxchr')
+ggsave('test_data/segment_test_plot2.pdf',width = 12, height = 7)
+ggsave('test_data/segment-maxchr_test_plot2.pdf',width = 10, height = 6)
 
 ##Third test:
 # merging
@@ -194,10 +206,12 @@ ggplot(p.melt,aes(x=gapSize,y=probeNumber)) + geom_violin() +
 ggsave(sprintf('test_data/%s_small_segment_probeNr.pdf',sampleName),width = 4,height = 4)
 
 library(ggplot2)
+library(readr)
 Summary <- read_delim("/Users/pgweb/arraydata/aroma/EvaluationPack/sample_evalutaion_summary.tsv", 
-                      +     "\t", escape_double = FALSE, trim_ws = TRUE)
+                      delim = "\t", escape_double = FALSE, trim_ws = TRUE)
+S <- Summary[Summary$Array %in% cids,]
 colnames(Summary)
-p = ggplot(Summary)
+p = ggplot(S)
 p + geom_point(aes(x=CNsegments,y=fracbsegments)) + facet_wrap(~platform) + scale_x_log10() + scale_y_log10()
 
 p + geom_point(aes(x=CNsegments,y=kurtosis_prob)) + facet_wrap(~platform) + scale_x_log10() + scale_y_log10()

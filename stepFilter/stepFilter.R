@@ -3,6 +3,7 @@ source('seg_stats.r')
 library(genlasso)
 
 cids= c("GSM1704973","GSM1704975","GSM1704979","GSM1146803","GSM337641", "GSM381297", "GSM433918")
+options("scipen"=100, "digits"=4)
 for (cid in cids){
   for (gp in c('1e4','5e4','1e5')){ 
     segStep = stepwiseDifference(as.numeric(gp),sprintf('test_data/combine_series/%s/segments,cn,5_sdundo_1.tsv',cid))

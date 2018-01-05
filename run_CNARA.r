@@ -19,14 +19,14 @@ trainingFile <- file.path(workPath, "trainingSet.txt")
 
 arrayDir <- file.path(samplePath, series)
 arrayList <- list.dirs(arrayDir)[-1]
-#arrayList <- unlist(regmatches(arrayList,gregexpr('GSM[0-9]+',arrayList,perl=T)))
-arrayList <- sapply(arrayList,function(x) {
-    allfolders <- strsplit(x,"/",fixed=T)[[1]]
-    return(allfolders[length(allfolders)])
-})
+arrayList <- unlist(regmatches(arrayList,gregexpr('GSM[0-9]+',arrayList,perl=T)))
+#arrayList <- sapply(arrayList,function(x) {
+#    allfolders <- strsplit(x,"/",fixed=T)[[1]]
+#    return(allfolders[length(allfolders)])
+#})
 names(arrayList) = NULL
 noArray <- length(arrayList)
-
+print(arrayList)
 summaryFile <- file.path(getwd(),'CNARA_summary.tsv')
 outputFile <- file.path(arrayDir, "CNARA_output.txt")
 tableHeader <- paste("Sample", "Series", "Speak", "Breakpoint_Step", "Breakpoint_CBS", "Spread", "Classification_Label", "Decision_Value", "Good_Poor", "Case_Diagnosis", sep = "\t")
@@ -49,7 +49,7 @@ for (arr in 1:noArray) {
   newSpeakCNAno <- calSpeakCNAno(newCNProbe)
 
   #plot S graph
-  plot(quality(newSpeakCNAno), xlab = "number of iterations", ylab = "S", main=arrayList[arr])
+#  plot(quality(newSpeakCNAno), xlab = "number of iterations", ylab = "S", main=arrayList[arr])
 
   segNumberCBS <- calCBSBreakpoints(newCNProbe)
   segSpread <- calSpread(newCNProbe, segFile=segFile)
