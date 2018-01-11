@@ -10,6 +10,7 @@ Created on Sun Oct 22 14:53:48 2017
 import scipy.stats as st
 import pandas as pd
 import numpy as np
+import subprocess
 import click
 import os
 from time import strftime
@@ -47,13 +48,13 @@ def cli(test,update,workingdir,threads,block,allblocks,cnara):
     print ('Doing %d series: \n%s' %(len(serieslist),serieslist))
 
 #### run CNARA, per series
-    if cnara:
+    if cnara ==1:
         def runPipeline (series):
             arguments = [series, data_dir, str(update)]
             subprocess.run('cd {0};/usr/local/bin/r --vanilla <run_CNARA.r --args {1} '.format(workingdir,' '.join(arguments)), shell = True)
 
 ## run analysis per array
-    else:
+    elif cnara == 0:
         arrayPlatform = {}
         arrayTumor = {}
         with open('blockfile_PLATFORM_knownser.tsv', 'r') as f:
@@ -166,8 +167,16 @@ def cli(test,update,workingdir,threads,block,allblocks,cnara):
                 with open(summaryfile,'a') as evaluationfile:
                     evaluationfile.write('\t'.join([series, array] + values) + '\n')
 
-
+    elif cnara == 2:
+        def runPipeline (series):
+            print ('Started series: {}'.format(series))
+            for array in os.listdir(os.path.join(data_dir,series) ):
+                if not array.startswith('GSM'): continue
+                print('currently processing:', array)
+                arguments = [data_dir,series,array,'1e4']
+                subprocess.run('cd {0};/usr/local/bin/r --vanilla <stepFilter/calMinLmd.r --args {1} &>/dev/null'.format(workingdir,' '.join(arguments)), shell = True)
     p.map(runPipeline,serieslist)
+
 
 def test_example():
     cli('sample_series',1)

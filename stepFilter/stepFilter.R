@@ -18,7 +18,7 @@ for (cid in cids){
     print(min(lassoOut$lambda))
     readline(prompt="Press [enter] to continue")
     
-    if (ceiling(min(lassoOut$lambda))<0.3){
+    if (min(lassoOut$lambda)<0.3){
       lmds <- c(0.3,0.5,1)
     } else {
       small <- ceiling(min(lassoOut$lambda))
